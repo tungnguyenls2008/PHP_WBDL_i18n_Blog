@@ -30,3 +30,7 @@ Route::group(['middleware' => 'locale'], function() {
     // Chuyển đổi ngôn ngữ cho website
     Route::get('change-language/{language}', 'LanguageController@changeLanguage')->name('user.change-language');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
